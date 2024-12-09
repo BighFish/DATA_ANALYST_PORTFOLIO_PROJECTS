@@ -8,6 +8,7 @@ Identify trends in sales data.
 Analyze product performance based on quantity sold and revenue.
 Filter and segment data using MySQL queries.
 Easy-to-follow structure for beginners and professionals alike.
+
 📋 Prerequisites
 
 MySQL installed.
