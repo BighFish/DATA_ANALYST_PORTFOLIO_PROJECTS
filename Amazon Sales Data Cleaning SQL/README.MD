@@ -17,6 +17,7 @@ Filter and segment data using MySQL queries.
 Easy-to-follow structure for beginners and professionals alike.
 
 
+
 📋 Prerequisites
 
 MySQL installed.
