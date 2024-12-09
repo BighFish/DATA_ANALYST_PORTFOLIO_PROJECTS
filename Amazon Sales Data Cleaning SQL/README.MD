@@ -3,6 +3,7 @@
 ## About the Project
 
 >This project is a data analysis tool that identifies sales trends and underperforming products using MySQL and provides actionable insights through data visualization.
+
 >This data consists of all year amazon sales data for the year 2019 (12 datasets from January - December)
 
 🚀 Features
