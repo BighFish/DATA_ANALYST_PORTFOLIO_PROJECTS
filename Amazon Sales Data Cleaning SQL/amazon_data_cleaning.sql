@@ -91,46 +91,6 @@ WHERE (`Order ID` IS NULL OR `Order ID` = '')
     AND (`Order Date` IS NULL OR `Order Date`= '')
     AND (`Purchase Address` IS NULL OR `Purchase Address`='');
 
-
-
--- 3 STANDARDIZATION (TRIMMING, TEXT TO DATETIME, MEDIUMTEXT TO APPROPRIATE DATATYPES)
--- We noticed we have the same column names as the last row of our data, we need to remove this for easy standardization
-
--- SELECT *
--- FROM amazon_sales_data.staged_cleaned_data
--- ORDER BY `Order Date` DESC
--- LIMIT 1;
-
--- DELETE FROM amazon_sales_data.staged_cleaned_data
--- ORDER BY `Order Date` DESC
--- LIMIT 1;
-
--- UPDATE amazon_sales_data.staged_cleaned_data
--- SET `Order ID` = TRIM(`Order ID`), Product = TRIM(Product), `Quantity Ordered` = TRIM(`Quantity Ordered`), `Price Each` = TRIM(`Price Each`), `Purchase Address` = TRIM(`Purchase Address`);
-
--- Data type conversion using CAST()
-
-
--- SELECT `Order ID`
--- FROM `amazon_sales_data`.`staged_cleaned_data`
--- WHERE `Order ID` NOT REGEXP '^[0-9]+$';
-
--- UPDATE `amazon_sales_data`.`staged_cleaned_data`
--- SET `Order ID` = NULL
--- WHERE `Order ID` NOT REGEXP '^[0-9]+$';
-
--- ALTER TABLE `amazon_sales_data`.`staged_cleaned_data`
--- CHANGE COLUMN `Order ID` `Order ID` INT NULL;
-
--- UPDATE `amazon_sales_data`.`staged_cleaned_data`
--- SET `Quantity Ordered` = NULL, `Price Each` = NULL
--- WHERE `Quantity Ordered` NOT REGEXP '^[0-9]+$' OR `Price Each` NOT REGEXP '^-?[0-9]+(\.[0-9]+)?$';
-
--- ALTER TABLE `amazon_sales_data`.`staged_cleaned_data`
--- CHANGE COLUMN `Quantity Ordered` `Quantity Ordered` INT NULL,
--- CHANGE COLUMN `Price Each` `Price Each` FLOAT NULL;
-
-
 -- The Order Date column is in a wrong datetime format dd-mm-yy
 SELECT *
 FROM amazon_sales_data.staged_cleaned_data
